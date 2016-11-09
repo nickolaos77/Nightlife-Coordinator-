@@ -1,0 +1,12 @@
+{{#section 'Menu'}} 
+    {{#if logoutMenu}}
+        {{> logoutMenu}} 
+    {{else}}
+        {{> loginMenu}}
+    {{/if}}
+{{/section}}
+
+
+
+    {{> venues}} {{!-- this partial goes inside the body element of the layout main --}}
+

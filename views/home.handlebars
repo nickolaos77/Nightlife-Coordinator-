@@ -1,0 +1,25 @@
+{{#section 'Menu'}} 
+    {{#if logoutMenu}}
+        {{> logoutMenu}} 
+    {{else}}
+        {{> loginMenu}}
+    {{/if}}
+{{/section}}
+
+
+    {{#if nobars}}
+        <section class='row'>
+            <div class = 'col-xs-12 text-center'>
+                <h4>Sorry.. We don't have available data for {{acity}} </h4>
+            </div>
+        </section>    
+    {{/if}} 
+    
+
+    <!-- /.row -->
+
+    <script> 
+  $(document).ready(function(){    
+        $("body").css("background-color", "darkturquoise");    
+});   
+    </script>

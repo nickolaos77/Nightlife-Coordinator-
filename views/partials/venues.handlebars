@@ -1,0 +1,32 @@
+
+        <div class='row'>
+            {{#each bars}}
+               <div class='col-xs-12 col-sm-6 col-sm-pull-1 '>
+                <div class='well' style='padding:8px'>
+                    <div class="media">
+                        <div class="media-left ">
+                            <a href="#" id='image' >
+                                <img class="media-object img-thumbnail" src='{{image}}'  style='width:100px; height:100px; border-radius:10px; opacity:1'>
+                            </a>
+                        </div>
+                        
+                        <div class="media-body">
+<!--                            <h3 class="media-heading">The Crobar</h3>-->
+                            <blockquote>
+                                <h4 class="media-heading">{{name}}</h4>
+                                <footer>{{address}}<cite title="Source Title" id= 'cite'></cite></footer>
+                                 <form onsubmit="this.action = '{{city}}' + '/' + '{{id}}' ;" method="POST"  style="display:inline">
+                                <div class="form-group" style="display:inline">     
+                                 <button class='btn btn-default pull-right' style='margin-right:10%' id='{{id}}'>{{going}} Going</button>
+                                    </div>
+                                </form>
+                            </blockquote>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            {{/each}}
+        </div>   

@@ -1,0 +1,22 @@
+App ID
+mWlNCtYSrFAS_WSAqgMK4w
+
+App Secret
+JURIJ1EJQTJWBOZNFrfvwwguUQqgJgEEXzxkBsLSxDb04PErKXE66qDzcx8sPHb1
+
+Then I make a POST request using postman:
+https://api.yelp.com/oauth2/token?client_id=mWlNCtYSrFAS_WSAqgMK4w&client_secret=JURIJ1EJQTJWBOZNFrfvwwguUQqgJgEEXzxkBsLSxDb04PErKXE66qDzcx8sPHb1
+and I get the following response to the body of the answer
+
+{
+  "access_token": "ZkPmz1xpyGY_Jz0_b38SwDwqL_7EvmOLH6kGZm8K0BU2kjPLowJdF-Vi8ld5YU7KWHZYMb6u78JGXAAvCl_LnZ5r2krQCVJ-prrpKotkJp2zdl91heManY0XmpoPWHYx",
+  "token_type": "Bearer",
+  "expires_in": 15551985
+} 
+
+ATTENTION : The token will expire in 180 days (today is 25/10/2016)
+
+Now that I have the access token I can pass it to the headers section of a GET request setting in Postman Key: Authorization, Value: Bearer ZkPmz1xpyGY_Jz0_b38SwDwqL_7EvmOLH6kGZm8K0BU2kjPLowJdF-Vi8ld5YU7KWHZYMb6u78JGXAAvCl_LnZ5r2krQCVJ-prrpKotkJp2zdl91heManY0XmpoPWHYx
+
+and now I can set the Url adress to https://api.yelp.com/v3/businesses/search?location=cincinatti&categories=bars and make the get request   
+
